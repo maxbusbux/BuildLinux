@@ -24,8 +24,12 @@ wait
 sudo apt install libssl-dev
 wait
 sleep 1
+echo going into kernel directory
+sleep 1
 cd ubuntu-xenial
 sleep 1
+echo making menuconfig
+sleep 2
 sudo make menuconfig 
 wait
 sleep 2
