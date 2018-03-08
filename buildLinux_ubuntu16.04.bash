@@ -37,3 +37,7 @@ sudo make menuconfig
 wait
 sleep 2
 sudo fakeroot make-kpkg -j 5 --initrd --append-to-version=-custom kernel_image kernel_headers #-j
+wait
+sleep 2
+toilet -F metal -F gay "Thanks For Using this software!"
+sleep 2
