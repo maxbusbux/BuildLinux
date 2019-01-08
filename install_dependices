@@ -1,0 +1,3 @@
+#! /bin/bash
+This Script Install Basic dependices for script
+sudo apt install read toilet figlet
