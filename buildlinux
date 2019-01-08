@@ -20,6 +20,7 @@ echo going into kernel directory
 sleep 1
 cd linux-4.19.0
 sleep 1
+read -p "Press enter to build kernel"
 echo making menuconfig
 sleep 2
 sudo make menuconfig 
