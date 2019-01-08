@@ -9,16 +9,16 @@ wget https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.19.10.tar.xz
 wait 
 echo unpacking archive
 sleep 1
-tar xvfJ  linux-4.19.0.tar.xz
+tar xvfJ  linux-4.19.10.tar.xz
 sleep 2
 echo installing requirements
 sleep 4
-sudo apt-get installl build-dep-linux  kernel-package fakerootsudo  libncursesw5-dev libssl-dev
+sudo apt-get install   kernel-package fakeroot  libncursesw5-dev libssl-dev bison flex
 wait
 sleep 1
 echo going into kernel directory
 sleep 1
-cd linux-4.19.0
+cd linux-4.19.10
 sleep 1
 read -p "Press enter to build kernel"
 echo making menuconfig
@@ -29,3 +29,4 @@ sleep 2
 sudo fakeroot make-kpkg -j 5 --initrd --append-to-version=-custom kernel_image kernel_headers #-j
 wait
 sleep 2
+echo "Kernel compiled"
