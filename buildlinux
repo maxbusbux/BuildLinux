@@ -18,7 +18,7 @@ wait
 sleep 1
 echo going into kernel directory
 sleep 1
-cd linux-4.19.10
+cd linux-5.0
 sleep 1
 read -p "Press enter to build kernel"
 echo making menuconfig
