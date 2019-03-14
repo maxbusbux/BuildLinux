@@ -9,7 +9,7 @@ wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.0.tar.xz
 wait 
 echo unpacking archive
 sleep 1
-tar xvfJ  linux-4.19.10.tar.xz
+tar xvfJ  linux-5.0.tar.xz
 sleep 2
 echo installing requirements
 sleep 4
