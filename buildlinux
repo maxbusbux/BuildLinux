@@ -13,7 +13,7 @@ tar xvfJ  linux-5.0.tar.xz
 sleep 2
 echo installing requirements
 sleep 4
-sudo apt-get install   kernel-package fakeroot  libncursesw5-dev libssl-dev bison flex
+sudo apt  install   kernel-package fakeroot  libncursesw5-dev libssl-dev bison flex
 wait
 sleep 1
 echo going into kernel directory
