@@ -5,7 +5,7 @@ wait
 sleep 1
 echo dowloading linux-kernel
 sleep 5
-wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.0.3tar.xz
+wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.0.3.tar.xz
 wait 
 echo unpacking archive
 sleep 1
