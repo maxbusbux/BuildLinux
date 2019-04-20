@@ -1,5 +1,5 @@
 #!/bin/bash
-toilet -F gay  "BuildLinux"
+./lolban BuildLinux | pv -q -L 700
 wait
 sleep 3
 wait
