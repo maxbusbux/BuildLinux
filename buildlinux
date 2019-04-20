@@ -1,5 +1,5 @@
 #!/bin/bash
-./lolban BuildLinux | pv -q -L 700
+./lolban BuildLinux | pv -q -L 500
 wait
 sleep 3
 wait
