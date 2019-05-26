@@ -1,5 +1,10 @@
 #!/bin/bash
-./lolban BuildLinux | pv -q -L 500 | lolcat
+if ! [ -x "$(command -v lolban)" ];then
+  ./lolban BuildLinux | pv -q -L 500 | lolcat
+else
+  lolban BuildLinux | pv -q -L 500 | lolcat
+
+fi
 wait
 sleep 3
 wait
@@ -7,7 +12,7 @@ sleep 1
 echo dowloading linux-kernel
 sleep 5
 wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.0.7.tar.xz
-wait 
+wait
 echo unpacking archive
 sleep 1
 tar xvfJ  linux-5.0.7.tar.xz
@@ -24,7 +29,7 @@ sleep 1
 read -p "Press enter to build kernel"
 echo making menuconfig
 sleep 2
-sudo make menuconfig 
+sudo make menuconfig
 wait
 sleep 2
 sudo fakeroot make-kpkg -j 5 --initrd --append-to-version=-custom kernel_image kernel_headers #-j
