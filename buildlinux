@@ -9,24 +9,24 @@ wait
 sleep 3
 wait
 sleep 1
-echo dowloading linux-kernel
+echo "dowloading linux-kernel" |pv -qL10
 sleep 5
 wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.0.7.tar.xz
 wait
-echo unpacking archive
+echo "unpacking archive" |pv -qL10
 sleep 1
 tar xvfJ  linux-5.0.7.tar.xz
 sleep 2
-echo installing requirements
+echo "installing requirements"|pv -qL10
 sleep 4
 sudo apt  install   kernel-package fakeroot  libncursesw5-dev libssl-dev bison flex
 wait
 sleep 1
-echo going into kernel directory
+echo "going into kernel directory"|pv -qL10
 sleep 1
 cd linux-5.0.7
 sleep 1
-read -p "Press enter to build kernel"
+read -p "Press enter to build kernel"|pv -qL10
 echo making menuconfig
 sleep 2
 sudo make menuconfig
@@ -35,4 +35,4 @@ sleep 2
 sudo fakeroot make-kpkg -j 5 --initrd --append-to-version=-custom kernel_image kernel_headers #-j
 wait
 sleep 2
-echo "Kernel compiled"
+echo "Kernel compiled"|pv -qL10
