@@ -24,7 +24,7 @@ sudo apt  install   kernel-package fakeroot  libncursesw5-dev libssl-dev bison f
 wait
 sleep 1
 echo "going into kernel directory"|pv -qL10
-sleep 1
+sleep 1s
 cd linux-5.0.7
 sleep 1
 read -p "Press enter to build kernel"|pv -qL10
