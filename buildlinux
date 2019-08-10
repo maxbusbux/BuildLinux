@@ -1,5 +1,5 @@
 #!/bin/bash
-ver="5.2.3"
+ver="5.2.8"
 if ! [ -x "$(command -v lolban)" ];then
   ./lolban BuildLinux | pv -q -L 500 | lolcat
 else
@@ -16,7 +16,7 @@ wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-$ver.tar.xz
 wait
 echo "unpacking archive" |pv -qL10
 sleep 1
-tar xvfJ  linux-5.0.7.tar.xz
+tar xvfJ  linux-$ver.tar.xz
 sleep 2
 echo "installing requirements"|pv -qL10
 sleep 4
