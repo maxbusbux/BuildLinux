@@ -1,5 +1,5 @@
 #!/bin/bash
-ver="5.2.10"
+ver="5.2.11"
 if ! [ -x "$(command -v lolban)" ];then
   ./lolban BuildLinux | pv -q -L 500 | lolcat
 else
